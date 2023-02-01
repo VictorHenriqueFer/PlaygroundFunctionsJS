@@ -21,16 +21,14 @@ const footballPoints = (vic, emp) => vic * 3 + emp;
 
 // Desafio 5 - Crie a função highestCount
 const highestCount = (numb) => {
-  let qtdmaiorNumero = 0;
-  let maiorqtd = 0;
-  qtdmaiorNumero = Math.max(...numb)
-  for (let index = 0; index < numb.length; index += 1) {
-    if (qtdmaiorNumero === numb[index]) {
-      maiorqtd += 1;
+  let qtdmaiorNumero = [];
+  for (let index of numb) {
+    if (index >= qtdmaiorNumero) {
+      qtdmaiorNumero.push(index);
     }
   }
-  return maiorqtd;
-}
+  return qtdmaiorNumero;
+};
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 const calcTriangleArea = (base, height) => (base * altura) / 2;
 
@@ -41,9 +39,10 @@ const calcAllAreas = (base, height, form) => {
     return `O valor da área do triangulo é de: ${calcTriangleArea(base, height)}`;
   } if (form === 'retangulo') {
     return `O valor da área do retangulo é de: ${calcRectangleArea(base, height)}`;
-  }  
-    return 'Não foi possivel fazer o calculo, insira uma forma geométrica válida';
   }
+  return 'Não foi possivel fazer o calculo, insira uma forma geométrica válida';
+};
+console.log(calcAllAreas(10, 50, 'quadrado'));
 // Desafio 7 - Crie a função catAndMouse
 const catAndMouse = (mouse, cat1, cat2) => {
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
@@ -54,9 +53,9 @@ const catAndMouse = (mouse, cat1, cat2) => {
   return 'cat1';
 };
 // Desafio 8 - Crie a função fizzBuzz
-let array =[2, 15, 7, 9, 45]
+let array = [2, 15, 7, 9, 45]
 const fizzBuzz = (array) => {
-  let buzzfizz =[]
+  let buzzfizz = []
   for (let sam in array) {
     if (sam % 3 === 0 && sam % 5 === 0) {
       buzzfizz.push('fizzBuzz')
@@ -67,14 +66,20 @@ const fizzBuzz = (array) => {
     } else {
       buzzfizz.push('bug!')
     }
-    }
-    return buzzfizz;
-  } 
-  console.log(fizzBuzz(array))
+  }
+  return buzzfizz;
+}
+console.log(fizzBuzz(array))
 // Desafio 9 - Crie a função encode e a função decode
 const encode = (troca) => {
-  // achar algum codigo que troque as letras por numeros
-  troca.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5);
+  let encodecod
+  encodecod = encodecod.replace('a', '1'); encodecod = encodecod.replace('e', '2'); encodecod = encodecod.replace('i', '3'); encodecod = encodecod.replace('o', '4'); encodecod = encodecod.replace('u', '5');
+  return encodecod;
+}
+const decode = (troca) => {
+  let decodecod
+  encodecod = decodecod.replace('1', 'a'); decodecod = decodecod.replace('2', 'e'); decodecod = decodecod.replace('3', 'i'); decodecod = decodecod.replace('4', 'o'); decodecod = decodecod.replace('5', 'u');
+  return decodecod;
 }
 // achar um codigo que faça a leitura do replace
 
