@@ -32,17 +32,17 @@ const highestCount = (numb) => {
   return maiorqtd;
 }
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
-const calcTriangleArea = (base, height) => (base * altura) / 2;
+const calcTriangleArea = (base, height) => (base * height) / 2;
 
 const calcRectangleArea = (base, height) => (base * height);
 
 const calcAllAreas = (base, height, form) => {
-  if (form === 'triangulo') {
-    return `O valor da área do triangulo é de: ${calcTriangleArea(base, height)}`;
-  } if (form === 'retangulo') {
-    return `O valor da área do retangulo é de: ${calcRectangleArea(base, height)}`;
+  if (form === 'triângulo') {
+    return `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`;
+  } if (form === 'retângulo') {
+    return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`;
   }
-  return 'Não foi possivel fazer o calculo, insira uma forma geométrica válida';
+  return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
 };
 // Desafio 7 - Crie a função catAndMouse
 const catAndMouse = (mouse, cat1, cat2) => {
@@ -54,23 +54,23 @@ const catAndMouse = (mouse, cat1, cat2) => {
   return 'cat1';
 };
 // Desafio 8 - Crie a função fizzBuzz
-let array = [2, 15, 7, 9, 45]
 const fizzBuzz = (array) => {
   let buzzfizz = []
-  for (let sam in array) {
-    if (sam % 3 === 0 && sam % 5 === 0) {
+  for (let sam = 0; sam < array.length; sam +=1) {
+    if (array[sam] % 3 === 0 && array[sam] % 5 === 0) {
       buzzfizz.push('fizzBuzz')
-    } else if (sam % 3 === 0) {
-      buzzfizz.push('buzz')
-    } else if (sam % 5 === 0) {
+    } else if (array[sam] % 3 === 0) {
       buzzfizz.push('fizz')
+    } else if (array[sam] % 5 === 0) {
+      buzzfizz.push('buzz')
     } else {
       buzzfizz.push('bug!')
     }
   }
   return buzzfizz;
 }
-console.log(fizzBuzz(array))
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9 - Crie a função encode e a função decode
 const encode = (troca) => {
   let encodecod
