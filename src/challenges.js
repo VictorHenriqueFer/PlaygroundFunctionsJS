@@ -70,16 +70,16 @@ const fizzBuzz = (array) => {
   return buzzfizz;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+//console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9 - Crie a função encode e a função decode
 const encode = (troca) => {
-  let encodecod
-  encodecod = encodecod.replace('a', '1'); encodecod = encodecod.replace('e', '2'); encodecod = encodecod.replace('i', '3'); encodecod = encodecod.replace('o', '4'); encodecod = encodecod.replace('u', '5');
+  let encodecod = troca;
+  encodecod = encodecod.replaceAll('a', '1'); encodecod = encodecod.replaceAll('e', '2'); encodecod = encodecod.replaceAll('i', '3'); encodecod = encodecod.replaceAll('o', '4'); encodecod = encodecod.replaceAll('u', '5');
   return encodecod;
 }
 const decode = (troca) => {
-  let decodecod
-  decodecod = decodecod.replace('1', 'a'); decodecod = decodecod.replace('2', 'e'); decodecod = decodecod.replace('3', 'i'); decodecod = decodecod.replace('4', 'o'); decodecod = decodecod.replace('5', 'u');
+  let decodecod = troca;
+  decodecod = decodecod.replaceAll('1', 'a'); decodecod = decodecod.replaceAll('2', 'e'); decodecod = decodecod.replaceAll('3', 'i'); decodecod = decodecod.replaceAll('4', 'o'); decodecod = decodecod.replaceAll('5', 'u');
   return decodecod;
 }
 // achar um codigo que faça a leitura do replace
@@ -90,14 +90,15 @@ const techList = (tech, nome) => {
   let resultado = [];
   tech.sort();
 
-  if (tech.length === 0) {
-    return resultado;
+  for (let index = 0; index < tech.length; index += 1) {
+    resultado.push({ tech: tech[index], name: nome });
   }
-  for (let index in tech.length) {
-    resultado.push({ tech: tech[index], nome });
+  if (tech.length === 0) {
+    return [];
   }
   return resultado;
 };
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Não modifique essas linhas
 module.exports = {
