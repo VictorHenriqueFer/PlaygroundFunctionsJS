@@ -40,7 +40,7 @@ const calcAllAreas = (base, height, form) => {
   if (form === 'triangulo') {
     return `O valor da área do triangulo é de: ${calcTriangleArea(base, height)}`;
   } if (form === 'retangulo') {
-    return `O valor da área do retangulo é de: ${ calcRectangleArea(base, height)}`;
+    return `O valor da área do retangulo é de: ${calcRectangleArea(base, height)}`;
   }  
     return 'Não foi possivel fazer o calculo, insira uma forma geométrica válida';
   }
@@ -54,21 +54,23 @@ const catAndMouse = (mouse, cat1, cat2) => {
   return 'cat1';
 };
 // Desafio 8 - Crie a função fizzBuzz
-
+let array =[2, 15, 7, 9, 45]
 const fizzBuzz = (array) => {
-  for (let sam of array) {
-    const buzzfizz = []
-    if (sam % 3 === 0) {
-      buzzfizz.push('fizz')
-    } else if (sam % 5 === 0) {
-      buzzfizz.push('buzz')
-    } else if (sam % 3 === 0 && sam % 5 === 0) {
+  let buzzfizz =[]
+  for (let sam in array) {
+    if (sam % 3 === 0 && sam % 5 === 0) {
       buzzfizz.push('fizzBuzz')
+    } else if (sam % 3 === 0) {
+      buzzfizz.push('buzz')
+    } else if (sam % 5 === 0) {
+      buzzfizz.push('fizz')
     } else {
       buzzfizz.push('bug!')
     }
-  } return buzz
-}
+    }
+    return buzzfizz;
+  } 
+  console.log(fizzBuzz(array))
 // Desafio 9 - Crie a função encode e a função decode
 const encode = (troca) => {
   // achar algum codigo que troque as letras por numeros
