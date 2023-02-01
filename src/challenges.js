@@ -57,22 +57,35 @@ const catAndMouse = (mouse, cat1, cat2) => {
 
 const fizzBuzz = (array) => {
 for (let sam of array){
+  const buzzfizz = []
   if( sam % 3 === 0){
-// achar algum codigo que troque o resultado pela palavra buzz
+  buzzfizz.push('fizz')
   }else if( sam % 5 === 0){
-// achar algum codigo que troque o resultado pela palavra frizz
+  buzzfizz.push('buzz')
   }else if( sam % 3 === 0 && sam % 5 === 0){
-// achar algum codigo que troque o resultado pela palavra frizzbuzz
-  }else { }
-} // dar o retorno bug quando nao for!
+  buzzfizz.push('fizzBuzz')
+  }else { 
+    buzzfizz.push('bug!')
+  }
+} return buzz
 }
 // Desafio 9 - Crie a função encode e a função decode
-const troca = 'hi there'
 const encode = (troca) => {
-troca.replace('a',1).replace('e',2).replace('i',3).replace('o',4).replace('u',5)
-}
-console.log(encode)
+troca.replace('a',1).replace('e',2).replace('i',3).replace('o',4).replace('u',5);
 // Desafio 10 - Crie a função techList
+
+const techList = (tech, nome) => {
+  let resultado = [];
+  tech.sort();
+
+  if (tech.length === 0) {
+    return resultado;
+  }
+  for (let index in tech.length) {
+    resultado.push({ tech: tech[index], nome });
+  }
+  return resultado;
+};
 
 // Não modifique essas linhas
 module.exports = {
