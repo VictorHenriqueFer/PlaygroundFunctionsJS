@@ -21,14 +21,16 @@ const footballPoints = (vic, emp) => vic * 3 + emp;
 
 // Desafio 5 - Crie a função highestCount
 const highestCount = (numb) => {
-  let qtdmaiorNumero = [];
-  for (let index of numb) {
-    if (index >= qtdmaiorNumero) {
-      qtdmaiorNumero.push(index);
+  let qtdmaiorNumero = 0;
+  let maiorqtd = 0;
+  qtdmaiorNumero = Math.max(...numb)
+  for (let index = 0; index < numb.length; index += 1) {
+    if (qtdmaiorNumero === numb[index]) {
+      maiorqtd += 1;
     }
   }
-  return qtdmaiorNumero;
-};
+  return maiorqtd;
+}
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 const calcTriangleArea = (base, height) => (base * altura) / 2;
 
