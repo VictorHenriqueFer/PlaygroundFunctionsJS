@@ -56,22 +56,26 @@ const catAndMouse = (mouse, cat1, cat2) => {
 // Desafio 8 - Crie a função fizzBuzz
 
 const fizzBuzz = (array) => {
-for (let sam of array){
-  const buzzfizz = []
-  if( sam % 3 === 0){
-  buzzfizz.push('fizz')
-  }else if( sam % 5 === 0){
-  buzzfizz.push('buzz')
-  }else if( sam % 3 === 0 && sam % 5 === 0){
-  buzzfizz.push('fizzBuzz')
-  }else { 
-    buzzfizz.push('bug!')
-  }
-} return buzz
+  for (let sam of array) {
+    const buzzfizz = []
+    if (sam % 3 === 0) {
+      buzzfizz.push('fizz')
+    } else if (sam % 5 === 0) {
+      buzzfizz.push('buzz')
+    } else if (sam % 3 === 0 && sam % 5 === 0) {
+      buzzfizz.push('fizzBuzz')
+    } else {
+      buzzfizz.push('bug!')
+    }
+  } return buzz
 }
 // Desafio 9 - Crie a função encode e a função decode
 const encode = (troca) => {
-troca.replace('a',1).replace('e',2).replace('i',3).replace('o',4).replace('u',5);
+  // achar algum codigo que troque as letras por numeros
+  troca.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5);
+}
+// achar um codigo que faça a leitura do replace
+
 // Desafio 10 - Crie a função techList
 
 const techList = (tech, nome) => {
