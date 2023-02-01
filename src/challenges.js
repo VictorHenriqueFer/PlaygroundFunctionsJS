@@ -22,14 +22,15 @@ const footballPoints = (vic, emp) => vic * 3 + emp;
 // Desafio 5 - Crie a função highestCount
 const highestCount = (numb) => {
   let qtdmaiorNumero = 0;
-  maiorNumero = Math.max(...numb);
-  for (const index of numb) {
-    if (index === Math.max(...numb)) {
-      qtdmaiorNumero++;
-      return qtdmaiorNumero;
+  let maiorqtd = 0;
+  qtdmaiorNumero = Math.max(...numb)
+  for (let index = 0; index < numb.length; index += 1) {
+    if (qtdmaiorNumero === numb[index]) {
+      maiorqtd += 1;
     }
   }
-};
+  return maiorqtd;
+}
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 const calcTriangleArea = (base, height) => (base * altura) / 2;
 
@@ -38,12 +39,11 @@ const calcRectangleArea = (base, height) => (base * height);
 const calcAllAreas = (base, height, form) => {
   if (form === 'triangulo') {
     return `O valor da área do triangulo é de: ${calcTriangleArea(base, height)}`;
-  } else if (form === 'retangulo') {
-    return (`O valor da área do retangulo é de:`) + calcRectangleArea(base, height);
-  } else if (form === 'quadrado' && base === 10 && altura === 50) {
+  } if (form === 'retangulo') {
+    return `O valor da área do retangulo é de: ${ calcRectangleArea(base, height)}`;
+  }  
     return 'Não foi possivel fazer o calculo, insira uma forma geométrica válida';
   }
-}
 // Desafio 7 - Crie a função catAndMouse
 const catAndMouse = (mouse, cat1, cat2) => {
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
