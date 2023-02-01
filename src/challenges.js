@@ -42,7 +42,6 @@ const calcAllAreas = (base, height, form) => {
   }
   return 'Não foi possivel fazer o calculo, insira uma forma geométrica válida';
 };
-console.log(calcAllAreas(10, 50, 'quadrado'));
 // Desafio 7 - Crie a função catAndMouse
 const catAndMouse = (mouse, cat1, cat2) => {
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
@@ -78,7 +77,7 @@ const encode = (troca) => {
 }
 const decode = (troca) => {
   let decodecod
-  encodecod = decodecod.replace('1', 'a'); decodecod = decodecod.replace('2', 'e'); decodecod = decodecod.replace('3', 'i'); decodecod = decodecod.replace('4', 'o'); decodecod = decodecod.replace('5', 'u');
+  decodecod = decodecod.replace('1', 'a'); decodecod = decodecod.replace('2', 'e'); decodecod = decodecod.replace('3', 'i'); decodecod = decodecod.replace('4', 'o'); decodecod = decodecod.replace('5', 'u');
   return decodecod;
 }
 // achar um codigo que faça a leitura do replace
