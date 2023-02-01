@@ -31,7 +31,19 @@ const highestCount = (numb) => {
   }
 };
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
+const calcTriangleArea = (base, height) => (base * altura) / 2;
 
+const calcRectangleArea = (base, height) => (base * height);
+
+const calcAllAreas = (base, height, form) => {
+  if (form === 'triangulo') {
+    return `O valor da área do triangulo é de: ${calcTriangleArea(base, height)}`;
+  } else if (form === 'retangulo') {
+    return (`O valor da área do retangulo é de:`) + calcRectangleArea(base, height);
+  } else if (form === 'quadrado' && base === 10 && altura === 50) {
+    return 'Não foi possivel fazer o calculo, insira uma forma geométrica válida';
+  }
+}
 // Desafio 7 - Crie a função catAndMouse
 const catAndMouse = (mouse, cat1, cat2) => {
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
@@ -41,12 +53,25 @@ const catAndMouse = (mouse, cat1, cat2) => {
   }
   return 'cat1';
 };
-
-
 // Desafio 8 - Crie a função fizzBuzz
 
+const fizzBuzz = (array) => {
+for (let sam of array){
+  if( sam % 3 === 0){
+// achar algum codigo que troque o resultado pela palavra buzz
+  }else if( sam % 5 === 0){
+// achar algum codigo que troque o resultado pela palavra frizz
+  }else if( sam % 3 === 0 && sam % 5 === 0){
+// achar algum codigo que troque o resultado pela palavra frizzbuzz
+  }else { }
+} // dar o retorno bug quando nao for!
+}
 // Desafio 9 - Crie a função encode e a função decode
-
+const troca = 'hi there'
+const encode = (troca) => {
+troca.replace('a',1).replace('e',2).replace('i',3).replace('o',4).replace('u',5)
+}
+console.log(encode)
 // Desafio 10 - Crie a função techList
 
 // Não modifique essas linhas
